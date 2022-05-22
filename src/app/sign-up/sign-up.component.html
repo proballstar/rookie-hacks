@@ -1,3 +1,4 @@
+<app-navbar></app-navbar>
 <form [formGroup]="profileForm" (ngSubmit)="formSubmit()">
   <div>
     <label for="name">
@@ -20,8 +21,12 @@
   <button [disabled]="!profileForm.valid" type="submit">
     Submit
   </button>
-  This app uses ReCaptchaV3 for Security Purposes
+  <div class="row">
+    <div class="col-md-3">
+      <a class="flex flex-1 bg-white hover:bg-gray-400 border-2 border-black hover:border-gray-800 p-3 rounded-lg" (click)="google()" role="button" style="text-transform:none">
+        <img width="20px" style="margin-bottom:3px; margin-right:5px" alt="Google sign-in" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />
+        Sign In With Google
+      </a>
+    </div>
+  </div>
 </form>
-
-
-

@@ -1,10 +1,5 @@
-<form [formGroup]="profileForm" (ngSubmit)="formSubmit()">
-  <div>
-    <label for="name">
-      Name:
-    </label>
-    <input id='name' formControlName="name">
-  </div>
+<app-navbar></app-navbar>
+<form [formGroup]="signInInfo" (ngSubmit)="formSubmit()">
   <div>
     <label for="email">
       Email:
@@ -17,11 +12,8 @@
     </label>
     <input id="password" type="password" formControlName="password">
   </div>
-  <button [disabled]="!profileForm.valid" type="submit">
+  <button [disabled]="!signInInfo.valid" type="submit">
     Submit
   </button>
   This app uses ReCaptchaV3 for Security Purposes
 </form>
-
-
-

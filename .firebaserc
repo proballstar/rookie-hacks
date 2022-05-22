@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "rookiecourses": {
+      "hosting": {
+        "rookie-hacks": [
+          "rookiecourses"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "rookiecourses"
+  }
+}

@@ -1,1 +1,21 @@
-<p>display works!</p>
+<app-navbar [logged]="true" ></app-navbar>
+<div>
+  <iframe class="justify-center text-center m-auto" width="420" height="345" [src]="courseURL | safe: 'resourceUrl' ">
+
+  </iframe>
+  <div class="py-4 grid grid-cols-5">
+    <div class="text-center col-span-2">
+      <button class="rounded-lg px-5 py-2 bg-red-500 hover:bg-red-300 text-white font-medium" (click)="continueUser(false)">
+        Back
+      </button>
+    </div>
+    <div class="cols-span-1">
+      Your Current Videos
+    </div>
+    <div class="text-center col-span-2">
+      <button class="rounded-lg px-5 py-2 bg-green-500 hover:bg-green-300 text-white font-medium" (click)="continueUser(true)">
+        Forward
+      </button>
+    </div>
+  </div>
+</div>

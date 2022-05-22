@@ -1,1 +1,14 @@
-<p>listings works!</p>
+<app-navbar [logged]="true"></app-navbar>
+<ng-template class="p-3" ngFor [ngForOf]="listings" let-listing let-i="index">
+  <div class="text-center p-3 m-2 shadow-md flex flex-col">
+    <div class="text-3xl font-semibold">
+      {{listing.name}}
+    </div>
+    <div class="text-xl font-medium">
+      {{listing.description}}
+    </div>
+    <button class="px-2 py-2 font-medium text-lg text-white bg-blue-600 hover:bg-blue-400" (click)="setUser(listing.id)">
+      Start
+    </button>
+  </div>
+</ng-template>

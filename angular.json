@@ -31,9 +31,12 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/chart.js/dist/chart.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -99,9 +102,20 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css",
               "src/styles.scss"
             ],
             "scripts": []
+          }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "rookie-hacks:build:production",
+            "firebaseProject": "rookiecourses",
+            "firebaseHostingSite": "rookiecourses"
           }
         }
       }
